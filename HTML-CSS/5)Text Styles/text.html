@@ -1,0 +1,88 @@
+<style>
+  p{
+    font-family: Arial;
+  }
+  /*selector that is more specific has higher priority and it will override. 
+  eg here p in general selector and .video.title is a specific one, if in p font fam= arial but in video title its different, the one inside video title is priotised and acted*/
+  .video.title {
+   /* font-family: Arial;*/
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    width:300px;
+    text-align: left;
+    line-height: 24px;
+    margin: 0 0;/*paragraph by default has margin of 1em top and bottom, so we set it to 0 because of our need*/
+  }
+
+  .vid.stats{
+    /*font-family: Arial;*/
+    color:rgb(96, 96, 96);/*we can find this color in the dev tools of the browser->inspect->select on element needed->Computed has the details*/
+    font-size: 14px;
+    margin: 5px 0;
+  }
+
+  .vid.author {
+    /*font-family: Arial;*/
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+    margin: 20px 0;
+  }
+
+  .vid.info {
+   /* font-family: Arial;*/
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+    width:280px;
+    margin: 10px 0;
+    line-height: 22px; /*line height is the space between lines of text*/
+  }
+
+  button{
+    background-color: rgb(227, 65, 64);
+    color: white;
+    font-size:14px;
+    padding: 16px 120px; 
+    border: none;
+    text-align: center;
+  }
+
+  .shop{
+    cursor:pointer;
+  }
+  .shop:hover{
+    text-decoration:underline;
+  }
+</style>
+
+<p class="video title">
+  Talking Tech and AI with Google CEO Sundar Pichai!
+</p>
+
+<p class="vid stats">
+  3.4M views &#183 6 months ago
+</p>
+
+<p class="vid author">
+  Marques Brownlee &#10003
+</p>
+
+<p class="vid info">
+  Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to Sundar!
+</p>
+
+<button>
+  Shop early for the best selection of holiday favourites.<span class="shop">Shop now &gt</span>  
+</button>
+ <!-- HTML ENTITY is used to type special chars 
+      eg: for a Middle dot (·) we use &#183
+      GOOGLE WHENEVER WANT TO FIND WHATEVER YOU WANT
+      
+      Some browsers do not support html entities if we directly use them in the HTMLcode, hence we give code number of the entity -->
+
+  <!-- <p>
+     Shop early for the <strong class="">best selection</strong> of <u>holiday</u> favourites. <span class="">Shop now &gt </span>
+  </p> 
+  Here we see different text element tags used like u,strong etc. These have a default css font-weight and style , but if we still want to modify these using css we can add a class and do it.
+  the star here is SPAN element tag, this is used with a CLASS because, it doesnt have a  default effect. the main purpose is 
+  WE CAN STYLISE ONLT THE PARTICULAR SECTION IN A BIG PARA/SO BY GIVING THIS A UNIQUE CLASS NAME -->
