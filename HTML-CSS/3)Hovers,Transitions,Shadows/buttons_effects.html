@@ -1,0 +1,76 @@
+<style>
+  .subscribe-btn {
+    background-color: rgb(176, 37, 37);
+    color: white;
+    border: none;
+    height: 35px;
+    width: 100px;
+    border-radius: 2px; 
+    cursor: pointer;
+    transition: opacity 0.15s ; /* adds a smooth transition effect for opacity */
+  }
+  .subscribe-btn:hover {
+    /*background-color: rgb(0, 255, 0); changes the background color to a lighter red on hover */
+
+    opacity: 0.8; /* reduces the opacity to 0.8 on hover. value is b/w 0 to 1*/
+  }
+  .subscribe-btn:active{
+   /* background-color: rgb(0, 7, 200);  changes the background color to a darker red on click */
+
+   opacity: 0.6; /* reduces the opacity to 0.6 on click */
+  }
+
+
+  .join-btn {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(63, 121, 247);
+    border-color:rgb(66, 122, 235); 
+    border-style: solid; 
+    border-width: 1px; 
+    height: 35px; 
+    width: 60px; 
+    border-radius: 2px; 
+    cursor: pointer; 
+    margin-left: 10px; 
+    transition: background-color 0.15s, color 0.15s; /* adds a smooth transition effect for background color and text color */
+  }
+  .join-btn:hover {
+    background-color: rgb(63, 121, 247);
+    color:white;
+  }
+  .join-btn:active {
+   opacity: 0.6; /* reduces the opacity to 0.6 on click */
+  }
+
+
+  .tweet-btn {
+    background-color: rgb(29, 161, 242); 
+    color: white; 
+    font-weight: bold;
+    border: none; 
+    height: 35px; 
+    width: 75px; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    margin-left: 10px; 
+    transition: box-shadow 0.15s; 
+    /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* adds a shadow effect thats there always, not hover*/
+    /*right bottom blur rgba(a is opacity of shadow color b/w 0 to 1) */
+  }
+  .tweet-btn:hover {
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15); /* adds a shadow effect on hover */
+  }
+</style>
+
+
+<button class="subscribe-btn">
+  SUBSCRIBE
+</button>
+
+<button class="join-btn">
+  JOIN
+</button>
+
+<button class="tweet-btn">
+  Tweet
+</button>
