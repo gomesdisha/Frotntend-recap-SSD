@@ -1,0 +1,19 @@
+
+  button
+  {
+    background-color: black;
+    color: white;
+    border: none;
+    /* height: 40px;
+    width: 120px; */
+    padding-left: 21px;
+    padding-right: 21px;
+    padding-top:12px;
+    padding-bottom:12px;
+    cursor: pointer;
+    transition: opacity 0.3s; /* smooth transition for opacity */
+  }
+  button:hover
+  {
+    opacity: 0.8; /* reduces the opacity to 0.8 on hover */
+  }
