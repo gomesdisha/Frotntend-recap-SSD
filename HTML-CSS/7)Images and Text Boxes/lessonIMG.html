@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>YouTube</title>
+  <style>
+    .thumbnail-1 {
+      width:300px;
+      /*only set width, height will be auto adjust as needed so that image looks simillar to og*/
+
+      /* height: 300px; */
+      
+      /*if you want to set height and width both w/o losing the look, you can
+      use "object-fit" option , og img look is retained with h,w given but img might get cropped inorder to retain look */
+      /* object-fit: cover;by default obj pos with only fit it will be center */
+      object-fit: contain; /*if you want to keep the img in full view, this is used to retain og dimensions*/
+      /*object-fit: fill; //if you want to keep the img stretched to fit the box .This is automatically there when only w,h used*/
+
+      /* object-position: left; */
+      /*object-position: center; //if you want to keep the img centered */
+      /* object-position: right; if you want to keep the img right aligned */
+      object-position: top; /*if you want to keep the img top aligned */
+
+      border-width: 0.5em;/*this is according to the height and width set*/
+      border-style:groove;
+      border-color: blueviolet;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <img class ="thumbnail-1"src="thumbnail-1.webp">
+</body>
+
+</html>
