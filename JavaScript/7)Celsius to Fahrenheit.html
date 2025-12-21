@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7_Functions exercises</title>
+</head>
+<body>
+  
+  <button onclick="convertToFahrenheit(25);">Convert 25°C to °F</button>
+  
+  <button onclick="convertToCelsius(86);">Convert 86°F to °C</button>
+  
+  <button onclick="convertTemperature(25,'C')">Convert 25°C to °F in same fn </button>
+
+  <button onclick="convertTemperature(86,'F')">Convert 86°F to °C in same fn </button>
+
+  <script>
+   
+    function convertToFahrenheit(celsius){
+      fahrenheit= celsius*(9/5) +32;
+      alert(`${celsius} celsius in fahrenheit is ${fahrenheit}`);
+    }
+
+    function convertToCelsius(fahrenheit){
+      celsius= (fahrenheit-32)*(5/9);
+      alert(`${fahrenheit} fahrenheit in celsius is ${celsius}`);
+    }
+
+    function convertTemperature(degrees,unit)
+    {
+      if(unit == 'C'){
+         fahrenheit= degrees*(9/5) +32;
+         alert(`${degrees} celsius in fahrenheit is ${fahrenheit}`);
+      }
+      else{
+        celsius= (degrees-32)*(5/9);
+        alert(`${degrees} fahrenheit in celsius is ${celsius}`);
+      }
+    }
+
+  </script>
+
+</body>
+</html>

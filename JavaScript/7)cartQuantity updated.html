@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CartQuantity</title>
+</head>
+<body>
+
+  <p>Cart Quantity</p>
+
+  <button onclick="console.log('Cart Quantity: '+quantity)">
+    Show Quantity
+  </button>
+
+  <button 
+  onclick=" 
+    updateCartQuantity(1,'+');
+    console.log('Cart Quantity: '+quantity) ">
+    Add to Cart
+  </button>
+
+  <button onclick="
+  updateCartQuantity(2,'+');
+  console.log('Cart Quantity: '+quantity)">+2</button>
+
+  <button onclick="
+  updateCartQuantity(3,'+');  
+  console.log('Cart Quantity: '+quantity)">+3</button>
+
+  <button onclick="  
+  updateCartQuantity(4,'+');
+  console.log('Cart Quantity: '+quantity)">+4</button>
+
+  <button onclick=" 
+  updateCartQuantity(5,'+');
+  console.log('Cart Quantity: '+quantity)">+5</button>
+
+  <button onclick="
+  updateCartQuantity(1,'-');
+  console.log('Cart Quantity: '+quantity)">Remove from cart</button>
+
+  <button onclick="
+   updateCartQuantity(2,'-');
+  console.log('Cart Quantity: '+quantity)">-2</button>
+
+  <button onclick="
+   updateCartQuantity(3,'-');
+  console.log('Cart Quantity: '+quantity)">-3</button>
+
+  <button onclick="quantity=0; console.log('Cart was reset') ;console.log('Cart Quantity: '+quantity)">Reset Cart</button>
+
+  <script>
+    let quantity = 0;
+
+    function updateCartQuantity(num,sign)
+    {
+      if(sign==='+' && quantity+num>10)
+      {
+        alert('The cart is full');
+         return;
+      }else if(sign==='-' && quantity-num<0)
+      {
+        alert('Not enough items in the cart');
+         return;
+      }else if(sign==='+' )
+      {
+        quantity+=num;
+      }else if(sign==='-' )
+      {
+        quantity-=num;
+      }
+     
+    }
+  </script>
+
+</body>
+</html>
