@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip Game</title>
+</head>
+<body>
+
+  <button onclick=" playGame('Heads') ">Heads</button>
+
+  <button onclick=" playGame('Tails') ">Tails</button>
+  
+  <script>
+    
+    let result = "";
+    let guess = " ";
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      wins : 0,
+      losses :  0
+    };// parsing because in the local storage its stored in JSON format but we need it in normal object format
+
+    // if (guess === result) {
+    //   alert("You win! It was " + result);
+    // } else {
+    //   alert("You lose! It was " + result);
+    // }
+
+    function playGame(guess)
+    {
+      let flip = Math.random();
+      console.log(flip);
+      
+      if (flip < 0.5) {
+        result ="Heads";
+      } else {
+        result ="Tails";
+      }
+      
+      (guess === result)? alert(`You win! It was ${result}
+Wins: ${score.wins+1} Losses: ${score.losses}`) : alert(`You win! It was ${result} 
+Wins: ${score.wins} Losses: ${score.losses+1}`);
+
+      if (guess===result)
+      {
+        score.wins++;
+      }else
+      {
+        score.losses++;
+      }
+
+      localStorage.setItem(score,JSON.stringify(score)); //stringify because Score isnt in json format but to store we need it in JSON format
+
+       console.log(score);
+    }
+
+   
+
+  </script>
+
+</body>
+</html>
