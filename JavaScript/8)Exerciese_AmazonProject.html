@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon proj</title>
+</head>
+<body>
+  
+  <script>
+    /*let basketball ={
+      name: 'basketball',
+      price: 2095
+    };
+
+    console.log(basketball);
+
+    basketball.price +=500;
+
+    console.log(basketball);
+
+    basketball['delivery-time'] = '3 days';
+
+    console.log(basketball);*/
+
+    let product1 = {
+      name: 'shirt',
+      price: 1200
+    };
+    let product2 = {
+      name: 'trouser',
+      price: 2000
+    };
+
+    console.log(comparePrice(product1,product2));
+
+    function comparePrice(product1, product2)
+    {
+      if(product1.price<product2.price)
+       return product1;
+      else
+       return product2;
+    }
+
+    console.log(isSameProduct(product1,product2));
+
+    function isSameProduct(productA,productB)
+    {
+      if(productA.name === productB.name && productA.price === productB.price)
+       return true;
+      else
+       return false;
+    }
+
+    // let str ='Good Morning';
+    // console.log(str.toLowerCase());
+
+    // console.log(str.repeat(5));
+
+  </script>
+
+</body>
+</html>
